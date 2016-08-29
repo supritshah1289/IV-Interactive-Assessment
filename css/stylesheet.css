@@ -56,4 +56,35 @@ background-color: #47c8ab;
 .top-button{
   background-color: #a8ae00;
 }
+ /*responsive for mobile devices*/
+
+@media only screen and (max-device-width: 480px) {
+    .head{
+      height: 100%;
+      width: 100%;
+    }
+
+    .hero{
+      background-image: url(../assets/hero-bg-mobile.png);
+      padding: 3px;
+      margin-right: 0px;
+    }
+
+    .six>input{
+      width: 200px;
+    }
+    textarea{
+      width: 200px;
+    }
+}
+
+/* Larger than phablet */
+@media (min-width: 550px) {
+
+}
+
+/* Larger than tablet */
+@media (min-width: 750px) {
+
+}
 
