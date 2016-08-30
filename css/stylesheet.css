@@ -1,5 +1,6 @@
 body{
 font-family: 'PT Sans', sans-serif;
+
 }
 a{
   margin-left:30px;
@@ -36,6 +37,9 @@ button{
 }
 .hero{
   background-image: url(../assets/hero-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 20px;
   padding: 10px;
   margin-right: 0px;
 }
@@ -59,22 +63,63 @@ background-color: #47c8ab;
  /*responsive for mobile devices*/
 
 @media only screen and (max-device-width: 480px) {
-    .head{
-      height: 100%;
-      width: 100%;
+    p{
+      font-size: 10px;
     }
+
+
+    .top-button{
+      height: 10px;
+      width: 20px;
+      margin: 0px;
+      font-size: 100%;
+    }
+    .head{
+      height: 150px;
+      width: 195px;
+      margin: 0px;
+    }
+
 
     .hero{
       background-image: url(../assets/hero-bg-mobile.png);
-      padding: 3px;
-      margin-right: 0px;
+      background-repeat: no-repeat;
+      margin-bottom: 10px;
+      background-size: 200px 80px;
+      padding: 5px;
+      border-radius: 2px;
     }
 
-    .six>input{
-      width: 200px;
+    .hero>h5{
+      margin: 9px;
+      font-size: 10px;
     }
-    textarea{
-      width: 200px;
+    .hero>p{
+      font-size: 10px;
+      margin: 5px;
+      width: 113px;
+    }
+    .mobile{
+      width: 190px;
+      margin-left: 0px;
+    }
+    .six>input{
+      width: 190px;
+    }
+    p,textarea,#subject{
+      width: 190px;
+      font-size: 9px;
+    }
+    .hidden{
+    display: none;
+    }
+
+    .call{
+      height: 20px;
+      width: 190px;
+      background-color: #47c8ab;
+      color: white;
+      text-align: center;
     }
 }
 

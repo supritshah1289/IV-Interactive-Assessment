@@ -5,11 +5,28 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>SunshineGroup</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- jquery cdn -->
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="javascripts/script.js" type="text/javascript" charset="utf-8" async defer></script>
+
+
+
+  <!-- skeleton framework -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery.mmenu/5.7.0/addons/navbars/jquery.mmenu.navbars.min.js" type="text/javascript" charset="utf-8" async defer></script>
+
+  <!-- mmenu-->
+  <!-- <script type="text/javascript" src="javascripts/jquery.mmenu.min.js"></script> -->
+
+
+  <!-- <link href="jquery.mmenu.css" type="text/css" rel="stylesheet" /> -->
+
+  <!-- custom javascript -->
+  <script src="javascripts/script.js" type="text/javascript" charset="utf-8" async defer></script>
+
+  <!-- custom stylesheet -->
   <link rel="stylesheet" href="css/stylesheet.css">
+
+  <!-- google fonts -->
   <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
 
 </head>
@@ -18,13 +35,13 @@
   <!-- rsvp div start -->
   <div class="head">
     <div class="container">
-    <div class="row resp">
+    <div class="row">
       <div class="six columns">
-        <p>Lorem ipsum dolor sit amet <button class="top-button">LEARN MORE</button></p>
+        <p>Lorem ipsum dolor sit amet</p><button class="top-button">LEARN MORE</button>
       </div>
 
       <div class="six columns">
-         <p>Lorem ipsum vitae aut veritatis optio <button class="top-button">RSVP NOW</button></p>
+         <p>Lorem ipsum vitae aut veritatis optio</p><button class="top-button">RSVP NOW</button>
       </div>
     </div>
     </div>
@@ -41,9 +58,9 @@
           <!-- <a href=""><img src="./desktop-form.png" alt=""></a> -->
         </div>
         <div class="six columns">
-          <p>Call Us: <strong>603-742-2424</strong></p>
-          <button class="green">PATIENT PORTAL</button>
-          <button class="grey">MAKE AN APPOINTMENT</button>
+          <p class="call">Call Us: 603-742-2424</p>
+          <button class="green hidden">PATIENT PORTAL</button>
+          <button class="grey hidden">MAKE AN APPOINTMENT</button>
         </div>
       </div>
       </div>
@@ -52,7 +69,7 @@
 
     <!-- navigation -->
     <div class="container">
-      <nav class="navbar">
+      <nav class="navbar mobile" id="my-menu">
          <a href="index.html">HOME</a>
          <a href="#">OUR PROVIDERS</a>
          <a href="">TREATMENT &amp; CARE</a>
@@ -67,7 +84,7 @@
     <!-- contact us form -->
     <div class="container">
       <div class="row">
-        <div class="hero">
+        <div class="hero mobile">
           <h5>Contact Us</h5>
           <p>Please complete the form below to contact Sunshine Group</p>
         </div>
@@ -77,8 +94,13 @@
 
       <div class="container">
         <div class="eight columns">
-          <form>
-            <div class="row">
+
+          <div class="success">
+
+          </div>
+
+          <form action="response.php" action="POST" class="ajax" accept-charset="utf-8">
+            <div class="row" id="hide">
                   <p>Are you a current patient of Sunshine Group?
                   <input type="radio" name="patient" value="yes"> Yes
                   <input type="radio" name="patient" value="no"> No </br>
@@ -129,24 +151,25 @@
 
             </div>
             <p><span class="req">* Fields are required</span></p>
-            <button class="green">Send</button>
+            <button class="green mobile" id="send">Send</button>
           </form>
 
-          <p>
+          <p class="hidden">
             Please be aware that we cannot ensure that communications sent over the internet are secure. This includes correspondence sent throught this form or by email. If you are uncomfortable with such risks, you may contact us by phone instead of using this form. Do not include any Confidential Health informaion.
           </p>
 
 
         </div>
 
-        <div class="four columns">
+        <div class="four columns mobile">
           <p style="color: #47c8ab">Office:</p>
-          <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script><div style='overflow:hidden;height:200px;width:300px;'><div id='gmap_canvas' style='height:200px;width:300px;'></div><div><small><a href="http://www.embedgooglemaps.com">Generate your Google map here, quick and easy!</a></small></div><div><small><a href="https://binaireoptieservaringen.nl/">Klik hier!</a></small></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div><script type='text/javascript'>function init_map(){var myOptions = {zoom:10,center:new google.maps.LatLng(37.2984783,-81.2619292),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(37.2984783,-81.2619292)});infowindow = new google.maps.InfoWindow({content:'<strong>Sunchine Group</strong><br>100 left avenue, Sunchine, NY<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
-          <p>Sunchine Group Health, P.A </br>
+
+            <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script><div style='overflow:hidden;height:200px;width:300px;'><div class= "mobile" id='gmap_canvas' style='height:200px;width:300px;'></div><div><small><a href="http://www.embedgooglemaps.com">Generate your Google map here, quick and easy!</a></small></div><div><small><a href="https://binaireoptieservaringen.nl/">Klik hier!</a></small></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div><script type='text/javascript'>function init_map(){var myOptions = {zoom:10,center:new google.maps.LatLng(37.2984783,-81.2619292),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(37.2984783,-81.2619292)});infowindow = new google.maps.InfoWindow({content:'<strong>Sunchine Group</strong><br>100 left avenue, Sunchine, NY<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
+          </div>
+          <p class="hidden">Sunchine Group Health, P.A </br>
           100 Left Avenue, Sunchine, NY</br>
           Tel 800-777-2424</p>
         </div>
-
       </div>
     </div>
 
@@ -154,7 +177,7 @@
 
     <!-- footer -->
     <div class="container">
-      <div class="footer">
+      <div class="footer mobile">
         <p><img src="./assets/logo-footer.png" alt="Sunchine footer logo">Sunshine Group Health, P.A -- 100 Left Avenue, Sunchine, NY -- Phone: 617-800-7373</p>
       </div>
     </div>
